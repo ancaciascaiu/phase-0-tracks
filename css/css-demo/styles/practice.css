@@ -10,6 +10,15 @@
 	margin-bottom: 3px;
 
 }
+
+.job:hover{
+	background-color: #d0d6ed;
+}
+
 .list{
 	font-size: .8em;
+}
+
+ul > li{
+	color:green;
 }
