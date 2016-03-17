@@ -2,6 +2,7 @@ body{
   max-width: 960px;
   min-width: 460px;
   
+  
 }
 
 blockquote {
@@ -50,4 +51,24 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 800px) {
+  main > h1 {
+    font-size: 90%;
+    background-color: hotpink;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    width:100%;
+    background-color: hotpink;
+  }
+}
+
+/* @media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+} */
 
