@@ -1,5 +1,7 @@
 body{
-  width: 960px;
+  max-width: 960px;
+  min-width: 460px;
+  
   
 }
 
@@ -15,7 +17,7 @@ cite {
 }
 
 #external-links{
-  width: 200px;
+  width: 20%;
   display: inline-block;
   vertical-align: top;
 
@@ -28,7 +30,7 @@ cite {
 }
 
 main{
-  width: 756px;
+  width: 75%;
   display: inline-block;
   vertical-align: top;
 }
@@ -49,4 +51,24 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 800px) {
+  main > h1 {
+    font-size: 90%;
+    background-color: hotpink;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    width:100%;
+    background-color: hotpink;
+  }
+}
+
+/* @media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+} */
 
