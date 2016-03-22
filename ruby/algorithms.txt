@@ -15,3 +15,42 @@ end.
 
 2.Make tea
 When thirsty:
+	drink water
+When cold and thirsty:
+	boil water
+		turn on the stove
+		get teapot from the stove
+		make steps to the left
+			when in front of the sink: stop.
+		open teapot lid
+		turn on cold water
+		fill the teapot with water
+		take steps to the right
+			when in front of the sink: stop.
+		place teapot on the stove
+		wait till water boils and prepare the teacup
+			take steps to the left
+				when in front of the tea cupboard:stop
+			open the cupboard
+			pick a type of tea
+			close the cupboard door
+			take steps to the right
+				when in front of the cups cupboard: stop
+			open the cups cupboard door
+			take a cup
+			place the teabag in the cup
+			close the cupboard door
+			take steps to the right
+				when you get one step left from the stove: stop
+			place the cup next to the stove
+		when water boiled:
+			turn the stove off
+			take the teapot off
+			pour hot water into the teacup
+			wait for 3 minutes
+			take the teabag out and place it on the restspoon near the stove
+	Serve!
+
+	
+
+
