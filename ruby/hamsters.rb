@@ -25,3 +25,10 @@ if age.nil? or age.empty?
 end
 age = volume_level.to_i
 
+puts "###############################"
+puts "Name >>> " + hamster_name
+puts "Volume >>> " + volume.to_s
+puts "Fur color >>> " + fur_color
+puts "Adoption >>> " + candidate
+puts "Age >>> " + age.to_s
+puts "##############################"
