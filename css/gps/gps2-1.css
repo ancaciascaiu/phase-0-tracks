@@ -1,3 +1,30 @@
-body{
+header{
 	background-color: orange;
+	font-family: cursive;
+}
+
+
+.column-1{
+	background-color: orange;
+	float: left;
+	width: 45%;
+	margin-right: 10px;
+	padding: 5px;
+}
+
+.column-2{
+	background-color: orange;
+	float: right;
+	width: 50%;
+	padding: 5px;
+}
+
+article{
+	background-color: #fff2cc;
+}
+
+footer{
+	background-color: orange;
+	clear: both;
+	font-family: cursive;
 }
