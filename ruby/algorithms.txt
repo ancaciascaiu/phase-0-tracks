@@ -1,0 +1,17 @@
+1.How would a robot learn how to use the elevator
+If outside the elevator, 
+    press the button 
+    wait for door to open
+    get in
+If inside the elevator,
+	what floor do you wanna get to?
+	press the button with the number of the floor on it
+	wait for the door to open
+	step out
+end.
+    
+
+
+
+2.Make tea
+When thirsty:
