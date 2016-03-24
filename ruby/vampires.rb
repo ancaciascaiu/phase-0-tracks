@@ -35,17 +35,17 @@ else
 end
 
 ### deciding if our candidate is a vampire or not
-if true_age = true && (garlic_bread = true || insurance =true)
+if true_age == true && garlic_bread == true && insurance == true && (name == "Drake Cula" || name == "Tu Fang")
+	puts "Definitely a vampire"
+
+elsif true_age == true && (garlic_bread == true || insurance == true)
 	puts "Probably not a vampire"
 
-elsif true_age = false && (garlic_bread = false || insurance = false)
-	puts "Probably a vampire"
-
-elsif true_age = false && (garlic_bread = false && insurance = false)
+elsif true_age == false && garlic_bread == false && insurance == false
 	puts "Almost certainly a vampire"
 
-elsif true_age = true && garlic_bread = true && insurance = false && (name = "Drake Cula" || name = "Tu Fang")
-	puts "Definitely a vampire"
+elsif true_age == false && ( garlic_bread== false || insurance == false )
+	puts "Probably a vampire"
 
 else
 	puts "Results inconclusive."
