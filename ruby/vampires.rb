@@ -29,7 +29,7 @@ for i in 1..empl_nr do
 		if allergies == "stop" then
 			break
 		elsif allergies == "sunshine" then
-			puts "Probably a vampire"
+			puts "Probably a vampire. Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 			exit
 		end
 	end
@@ -72,4 +72,5 @@ for i in 1..empl_nr do
 
 end
 
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
