@@ -71,5 +71,6 @@ for i in 1..empl_nr do
 	end
 
 end
- puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
