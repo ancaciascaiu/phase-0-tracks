@@ -23,6 +23,17 @@ for i in 1..empl_nr do
 	puts "Would you like to enroll in the company’s health insurance? (yes/no)"
 	insurance = gets.chomp
 
+	puts "Please name any allergies that you have, one at a time."
+	while 1
+		allergies = gets.chomp
+		if allergies == "stop" then
+			break
+		elsif allergies == "sunshine" then
+			puts "Probably a vampire"
+			exit
+		end
+	end
+
 ### condition making
 	if 2016 - age.to_i == birth_year.to_i
 		true_age = true 
