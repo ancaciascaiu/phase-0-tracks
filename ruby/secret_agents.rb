@@ -17,12 +17,20 @@ end
 	
 ###set the index for each letter in the string
 ###take 	
-def decrypt(bananas)
-	bananas.index("abcdefghijklmnopqrstuvwxyz")
-	puts bananas
+def decrypt(banana)
+   ind = 0
+   alphabet = "abcdefghijklmnopqrstuvwxyz"
+   while ind < banana.length
+       litera = banana[ind]
+       index_in_alphabet = alphabet.index(litera)
+      if index_in_alphabet == 0
+          puts "z"
+      else
+          puts alphabet[index_in_alphabet - 1]
+       end
+       ind += 1
+   end
 end
-
-
 
 
 ### test methods
