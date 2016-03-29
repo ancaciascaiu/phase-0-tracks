@@ -11,5 +11,14 @@ p aquarium
 aquarium.insert(2, "rocks")
 p aquarium
 
+aquarium.shift
+p aquarium
 
+p aquarium.include?("shrimp")
+
+ocean = ["mermaid", "dolphin", "whale"]
+
+
+water = aquarium + ocean
+p water
 
