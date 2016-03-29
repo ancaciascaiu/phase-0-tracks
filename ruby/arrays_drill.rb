@@ -1,3 +1,12 @@
+def build_array(x, y, z)
+	p x, y, z
+end
+
+def add_to_array(a, x)
+	p a << x
+end
+
+
 aquarium = []
 p aquarium
 
@@ -22,3 +31,8 @@ ocean = ["mermaid", "dolphin", "whale"]
 water = aquarium + ocean
 p water
 
+build_array(1,"two",nil)
+
+add_to_array(["a", "b", "c", 1, 2], 3)
+add_to_array([], "Anca")
+add_to_array(["Hello world", 1, "everyone", true], "none")
