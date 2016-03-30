@@ -4,22 +4,21 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# “iNvEsTiGaTiOn”.<???>
+ p "iNvEsTiGaTiOn".swapcase
+ 
 # => “InVeStIgAtIoN”
 
-# “zom”.<???>
-# => “zoom”
-
-# “enhance”.<???>
+p "zom".replace("zoom")
+p "zom".gsub('o', 'oo')
 #=> “    enhance    ”
 
-# “Stop! You’re under arrest!”.<???>
+p "Stop! You’re under arrest!".upcase
 # => “STOP! YOU’RE UNDER ARREST!”
 
-# “the usual”.<???>
+p "the usual".insert(-1, " suspects")
 #=> “the usual suspects”
 
-#“ suspects”.<???>
+p " suspects".prepend("the usual")
 #=> “the usual suspects”
 
 # “The case of the disappearing last letter”.<???>
@@ -37,3 +36,5 @@
 
 #“How many times does the letter ‘a’ appear in this string?”.<???>
 #=> 4
+
+
