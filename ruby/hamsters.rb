@@ -32,3 +32,5 @@ puts "Fur color >>> " + fur_color
 puts "Adoption >>> " + candidate
 puts "Age >>> " + age.to_s
 puts "##############################"
+
+
