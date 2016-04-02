@@ -22,43 +22,47 @@ def prepare(name)
 end
 
 def make_alias(reversed_name_string)
+	alias_name = []
 	ind = 0
 	while ind < reversed_name_string.length 
 		#find vowels in separate_name_letters
 		letter = reversed_name_string[ind]
 		if $vowels.include?(letter)
 			if letter == "u"
-				print "a"
+				alias_name.push("a")
 
 			else 
 				dex = $vowels.index(letter)
-				print $vowels[dex + 1]
+				alias_name.push( $vowels[dex + 1] )
 			end
 
 		elsif letter == " "
-			print " "
+			alias_name.push( " " )
 			
 		else
 			if letter == "z"
-				print "b"
+				alias_name.push( "b" )
 			else
 				dix = $consonants.index(letter)
-				print $consonants[dix + 1]
+				alias_name.push( $consonants[dix + 1] )
 			end
 		end
+
 		ind += 1
 	end
+	
+	return alias_name.join("").split(" ").each{|x| print x.capitalize, " "}
 end
 
 loop do
-	print "Please enter a name. Type 'quit' if you`re done.\n"
+	print "\n\nPlease enter a name. Type 'quit' if you`re done.\n"
 	name = gets.chomp
 
 	if name == "quit"
-		puts ">>Thank you for using the Alias Manager!"
+		puts ">>Thank you for using the Alias Manager!\n\n"
 		break
 	else
-		puts ">>Alias name: "
+		puts ">>Alias name: " 
 		make_alias( prepare(name) )
 	end
 
