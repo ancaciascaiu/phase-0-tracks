@@ -3,6 +3,7 @@
 #define the subject
 puts "Please enter your name"
 name = gets.chomp
+name = name.downcase
 
 #swap the first and last name
 name = name.split(' ')
@@ -10,42 +11,39 @@ reversed_name = name.reverse
 
 #get each reversed name and separate letters in name
 separate_name_letters = reversed_name.join(' ').split('')
+#transform array into string
+reversed_name_string = separate_name_letters.join("")
 
 #make method for changing each vowel into the next one in 'aeiou' 
 #and each consonant into the next consonant in the alphabet
 vowels = "aeiou"
 consonants = "bcdfghjklmnpqrstvwxyz"
 
-index = 0
-while index < separate_name_letters.length
-	each_letter = separate_name_letters[index]
+ind = 0
+while ind < reversed_name_string.length #which is 10.Checked.
 	#find vowels in separate_name_letters
-	if vowels.include?(each_letter) 
-		if each_letter == "u"
+	letter = reversed_name_string[ind]
+	if vowels.include?(letter)
+		if letter == "u"
 			print "a"
+
 		else 
-			print each_letter
+			dex = vowels.index(letter)
+			print vowels[dex + 1]
 		end
-	
+		
+	elsif letter == " "
+		print " "
+		
 	else
-		if each_letter == "z"
+		if letter == "z"
 			print "b"
 		else
-			#???
+			dix = consonants.index(letter)
+			print consonants[dix + 1]
 		end
-	index +=1
 	end
+	ind += 1
 end
-
-
-
-
-
-
-
-
-
-
-
 
 #call methods, print result
