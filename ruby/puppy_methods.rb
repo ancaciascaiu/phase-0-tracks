@@ -50,3 +50,15 @@ class Restaurant
   end
   
 end
+
+i=0
+inst_coll = {} 
+50.times do
+  inst = Restaurant.new
+  
+  inst_coll.store(i, inst)
+  i += 1
+end
+
+puts inst_coll
+
