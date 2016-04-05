@@ -34,3 +34,19 @@ ball.speak(5)
 ball.rollover
 ball.dog_years(5)
 ball.dog_eating(3)
+
+class Restaurant
+  
+  def orders(int)
+    puts "I`ve got #{int} orders lined up."
+  end
+  
+  def receipt(x, y)
+    puts x + y
+  end 
+  
+  def initialize
+    puts "Order for the day"
+  end
+  
+end
