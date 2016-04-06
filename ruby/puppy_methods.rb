@@ -39,11 +39,13 @@ class Restaurant
   
   def orders(int)
     puts "I`ve got #{int} orders lined up."
+    self
   end
   
   def receipt(x, y)
   	total = x * y
     puts "Your total is...#{total}"
+    self
   end 
   
   def initialize
@@ -63,7 +65,6 @@ end
 #puts inst_coll
 
 inst_coll.each do |order_nr, instance| 
-	instance.orders(order_nr)
-	instance.receipt(order_nr, 20)
+	instance.orders(order_nr).receipt(order_nr, 20)
 end
 
