@@ -1,7 +1,7 @@
 
 class Santa
-	attr_reader :gender
-	attr_accessor :ethnicity
+	attr_reader :gender, :ethnicity
+	attr_accessor :age, :reindeer_ranking
 
 
 	def initialize(gender, ethnicity)
@@ -34,16 +34,28 @@ class Santa
 	
 end
 
+example_genders = ["agender", "female", "bigender", "male", "gender fluid"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)"]
 
+# santas = []
+# santas << Santa.new("agender", "black")
+# santas << Santa.new("female", "Latino")
+# santas << Santa.new("bigender", "white")
+# santas << Santa.new("male", "Japanese")
+# santas << Santa.new("female", "prefer not to say")
+# santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
+# santas << Santa.new("N/A", "N/A")
 
-santas = []
-santas << Santa.new("agender", "black")
-santas << Santa.new("female", "Latino")
-santas << Santa.new("bigender", "white")
-santas << Santa.new("male", "Japanese")
-santas << Santa.new("female", "prefer not to say")
-santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
-santas << Santa.new("N/A", "N/A")
+#santas.each {|santa| santa.eat_milk_and_cookies("chocolate").speak}
+#santas[0].ethnicity
 
+100.times do |so_many_santas|
+	gender = example_genders.sample
+	ethnicity = example_ethnicities.sample
+	santa=Santa.new(gender, ethnicity)
+	puts "This Santa has declared himself a #{ethnicity} #{gender}."
+	santa.age = (1..150).to_a.sample
+	puts "He is #{santa.age} years old."
+end
 
 
