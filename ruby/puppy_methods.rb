@@ -28,21 +28,24 @@ class Puppy
 end
 
 
-ball = Puppy.new
-ball.fetch("potato")
-ball.speak(5)
-ball.rollover
-ball.dog_years(5)
-ball.dog_eating(3)
+# ball = Puppy.new
+# ball.fetch("potato")
+# ball.speak(5)
+# ball.rollover
+# ball.dog_years(5)
+# ball.dog_eating(3)
 
 class Restaurant
   
   def orders(int)
     puts "I`ve got #{int} orders lined up."
+    self
   end
   
   def receipt(x, y)
-    puts x + y
+  	total = x * y
+    puts "Your total is...#{total}"
+    self
   end 
   
   def initialize
@@ -55,10 +58,13 @@ i=0
 inst_coll = {} 
 50.times do
   inst = Restaurant.new
-  
   inst_coll.store(i, inst)
   i += 1
 end
 
-puts inst_coll
+#puts inst_coll
+
+inst_coll.each do |order_nr, instance| 
+	instance.orders(order_nr).receipt(order_nr, 20)
+end
 
