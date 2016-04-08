@@ -12,21 +12,29 @@
 # Shout.yell_angrily("Mrrrrrrrrrrrr")
 
 module Shout
-	def yell(words)
-		puts words
+	def yell_happily(words)
+		puts words + " :)"
+	end
+
+	def yell_angrily(words)
+		puts words + " !!! mrrrrr..."
 	end
 end
 
-class Happy
+class HappyAngry
 	include Shout
 end
 
-class Angry
-	include Shout
-end
+puts # newline
 
-happy_yelling = Happy.new
-happy_yelling.yell("Yyyyyyyyyyabba-dabba-doooo... :)")
+yeller1 = HappyAngry.new
+yeller1.yell_happily("Yyyyyyyyyyabba-dabba-doooo... ")
+yeller1.yell_angrily("Hhhhhhow could you")
 
-angry_yelling = Angry.new
-angry_yelling.yell("Mrrrrrrrrr... Aaww-oooooo! :(")
+puts # newline
+
+yeller2 = HappyAngry.new
+yeller2.yell_happily("Yes, I knew it! I`m so happy!")
+yeller2.yell_angrily("Mrrrrrrrrr... Aaww-oooooo!")
+
+puts #newline
