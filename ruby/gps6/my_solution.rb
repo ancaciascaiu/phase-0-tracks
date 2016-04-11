@@ -9,22 +9,22 @@
 require_relative 'state_data'
 
 class VirusPredictor
-
+  # Initializes each instance with "state", "population", and "population_density" variables
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
-  private
-
+  # Joins together the results of the private methods
   def virus_effects
     predicted_deaths
     speed_of_spread
   end
 
-  
+  private
 
+  # Calculates the number of deaths in a particular state, according to population density
   def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -43,6 +43,7 @@ class VirusPredictor
 
   end
 
+  # Calculates speed of spread in a particular state based on population density
   def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
@@ -59,6 +60,9 @@ class VirusPredictor
     else
       speed += 2.5
     end
+
+    # shorthand : today == ChristmasEve ? (puts "Santa's On His Way!") : (puts "Snow")
+
 
     puts " and will spread across the state in #{speed} months.\n\n"
 
