@@ -28,17 +28,19 @@ class VirusPredictor
   def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
+      float = 0.4
     elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
+      float = 0.3
     elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
+      float = 0.2
     elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
+      float = 0.1
     else
-      number_of_deaths = (@population * 0.05).floor
+      float = 0.05
     end
 
+    number_of_deaths = (@population * float).floor
+    
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
@@ -50,20 +52,19 @@ class VirusPredictor
     speed = 0.0
 
     if @population_density >= 200
-      speed += 0.5
+      speed_rate = 0.5
     elsif @population_density >= 150
-      speed += 1
+      speed_rate = 1
     elsif @population_density >= 100
-      speed += 1.5
+      speed_rate = 1.5
     elsif @population_density >= 50
-      speed += 2
+      speed_rate = 2
     else
-      speed += 2.5
+      speed_rate = 2.5
     end
 
-    # shorthand : today == ChristmasEve ? (puts "Santa's On His Way!") : (puts "Snow")
-    #we don`t think it`s worthed to write a shorthand of the if/else conditions, for reading purposes.
-
+    speed += speed_rate
+    
     puts " and will spread across the state in #{speed} months.\n\n"
 
   end
