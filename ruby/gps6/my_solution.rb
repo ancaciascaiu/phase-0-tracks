@@ -62,7 +62,7 @@ class VirusPredictor
     end
 
     # shorthand : today == ChristmasEve ? (puts "Santa's On His Way!") : (puts "Snow")
-
+    #we don`t think it`s worthed to write a shorthand of the if/else conditions, for reading purposes.
 
     puts " and will spread across the state in #{speed} months.\n\n"
 
