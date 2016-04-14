@@ -11,22 +11,15 @@ function theEst(ary){
 	for (i = 0; i < ary.length-1; i++){
 		//get the current element in the array
 		currstr = longeststr;
-		
 		//get the next element in the array
 		nextstr = ary[i+1];
-		
 		//compare each string with the next one in the array, return the longest
 		if (currstr.length > nextstr.length) {
 			longeststr = currstr;
-			
-
 		} else {
 			longeststr = nextstr;
-			
 		}
-		
 	}
-
 	console.log (longeststr, longeststr.length);
 }
 
