@@ -23,7 +23,35 @@ function theEst(ary){
 	console.log (longeststr, longeststr.length);
 }
 
-theEst(["long phrase","longest phrase","longer phrase"]);
-theEst(["street", "town", "city", "whole wide world", "country", "continent"]);
-theEst(["panther", "crocodile", "ox", "lion", "worms", "pig"]);
+//match keys and values in 2 different objects
+function keyVal(obj1, obj2){
+	//loop around once for each key-value pair
+	keys1 = Object.keys(obj1); //these are the keys in obj1
+	keys2 = Object.keys(obj2);
+
+	for (i=0; i<keys1.length; i++){ //iterate through the keys-- it seems in javascript we can`t iterate through an object!!! mrrr...
+		val1 = obj1[keys1[i]]; //these are the values of object1
+		val2 = obj2[keys2[i]]; //the are the values of obj2
+		
+		if (keys1[i] == keys2[i]){ //if keys are the same, let`s check if values are also the same
+			if (val1 == val2){ //if values are the same...
+				console.log(true + "=>" + " The matching key: " + keys1[i] + " The matching value: " + val1);
+			} else {
+				console.log(false + "=>" + " The matching key: " + keys1[i] + " The values don`t match: " + val1 + " " + val2);
+			}
+		} else {
+			console.log(false + "=>" + " Keys don't match!")
+		}
+	}
+}
+
+// theEst(["long phrase","longest phrase","longer phrase"]);
+// theEst(["street", "town", "city", "whole wide world", "country", "continent"]);
+// theEst(["panther", "crocodile", "ox", "lion", "worms", "pig"]);
+
+var a = {type:"Fiat", model:"500", color:"white", speed:"200"};
+var b = {type:"Seat", model:"Ibiza", color:"white", owner: "Ricardo Benvenuti"};
+keyVal(a, b)
+
+
 
