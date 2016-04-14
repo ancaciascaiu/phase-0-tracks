@@ -21,6 +21,8 @@ function theEst(ary){
 		}
 	}
 	console.log (longeststr, longeststr.length);
+	
+
 }
 
 //match keys and values in 2 different objects
@@ -54,15 +56,15 @@ function makeWords(int){
 	for (i = 0; i < int; i++){
 		word = "";
 		for (j=0; j<nrLetters; j++){
-			
 			var randLet = Math.floor(Math.random()*alphabet.length);
 			word += alphabet[randLet];
 		}
 		wordCollection.push(word);
+		nrLetters = Math.floor((Math.random()*10)+1);//reinitialize the number of letters in a word
 	}
 	console.log(wordCollection);
+	return wordCollection;
 }
-
 
 // theEst(["long phrase","longest phrase","longer phrase"]);
 // theEst(["street", "town", "city", "whole wide world", "country", "continent"]);
@@ -72,5 +74,11 @@ function makeWords(int){
 // var b = {type:"Seat", model:"Ibiza", color:"white", owner: "Ricardo Benvenuti"};
 // keyVal(a, b)
 
-makeWords(5)
+//makeWords(5)
+var x=0;
+while (x<10){
+	newary = makeWords(5);
+	theEst(newary);
+	x++;
+}
 
