@@ -45,13 +45,32 @@ function keyVal(obj1, obj2){
 	}
 }
 
+//Write a function that takes an integer for length, and 
+	//builds and returns an array of strings of the given length
+alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+function makeWords(int){
+	var wordCollection = [];
+	var nrLetters = Math.floor((Math.random()*10)+1);
+	for (i = 0; i < int; i++){
+		word = "";
+		for (j=0; j<nrLetters; j++){
+			
+			var randLet = Math.floor(Math.random()*alphabet.length);
+			word += alphabet[randLet];
+		}
+		wordCollection.push(word);
+	}
+	console.log(wordCollection);
+}
+
+
 // theEst(["long phrase","longest phrase","longer phrase"]);
 // theEst(["street", "town", "city", "whole wide world", "country", "continent"]);
 // theEst(["panther", "crocodile", "ox", "lion", "worms", "pig"]);
 
-var a = {type:"Fiat", model:"500", color:"white", speed:"200"};
-var b = {type:"Seat", model:"Ibiza", color:"white", owner: "Ricardo Benvenuti"};
-keyVal(a, b)
+// var a = {type:"Fiat", model:"500", color:"white", speed:"200"};
+// var b = {type:"Seat", model:"Ibiza", color:"white", owner: "Ricardo Benvenuti"};
+// keyVal(a, b)
 
-
+makeWords(5)
 
