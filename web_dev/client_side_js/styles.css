@@ -1,0 +1,91 @@
+body{
+	max-width: 960px;
+	max-height:500px;
+	
+	font-family: Helvetica;
+	margin: 0px auto;
+	z-index:10;
+	background-image: url("people-love-tree-roots.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+
+body > * {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+section{
+	display:inline-block;
+	float:left;
+	margin-bottom: 10px;
+}
+
+header{
+	height:120px;
+}
+header > * {
+	font-size: 130%;
+	display:block;
+	margin-bottom: 30px;
+
+}
+h1{
+	margin-left: 350px;
+}
+
+
+div > p.about{
+	min-width:600px;
+	
+}
+
+aside{
+	font-family: Georgia, courier;
+	max-width: 300px;
+	display:inline-block;
+	padding-left: 2px;
+	border-color: black;
+	border-style: outset;
+	border-radius: 0.5em;
+}
+
+form{
+	margin-bottom: 20px;
+}
+
+footer{
+	position:fixed;
+	width: 960px;
+	margin-top:500px;
+	padding-top: -10px;
+	background-image: url("motiv-traditional-Hora.jpg");
+	background-repeat: repeat-x;
+	height: 400px;
+}
+ footer > p {
+ 	margin-top: 0px;
+ 	text-align: center;
+ }
+
+a:link{
+	color:black;
+}
+a:hover{
+	color: #006600;
+}
+a:visited{
+	color: #660033;
+}
+
+.roorg{
+	font-weight:bold;
+}
+
+@media screen and (max-width: 700px) {
+	body{
+		font-size: 90%;
+		background-color: cream;
+	}
+}
