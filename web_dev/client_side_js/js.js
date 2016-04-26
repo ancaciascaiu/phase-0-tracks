@@ -1,3 +1,2 @@
-div < * {
-	.hide();
-};
+var quote = document.getElementsByClassName("about")
+
