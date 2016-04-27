@@ -14,6 +14,8 @@ end
 
 # write a GET route with
 # route parameters
+
+
 get '/about/:person' do
   person = params[:person]
   "#{person} is a programmer, and #{person} is learning Sinatra."
@@ -44,3 +46,19 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+
+get '/contact/:address' do
+  address = params[:address]
+  "My address is #{address}"
+end 
+
+get '/great_job/' do
+  name = params[:name]
+  if name
+    "Good Job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
