@@ -24,4 +24,16 @@ post '/students' do
   redirect '/'
 end
 
+get '/students/graduation' do
+  erb :student_grad
+end
+
+post '/students/grad' do
+  db.execute("DELETE FROM students WHERE name = (?)", [params['name']])
+  redirect '/'
+end
+
 # add static resources
+
+
+
