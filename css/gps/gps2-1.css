@@ -3,10 +3,8 @@ header{
 	font-family: cursive;
 }
 
-
 .column-1{
 	background-color: orange;
-	
 	display:table-cell;
 	width: 45%;
 	margin-right: 10px;
@@ -15,7 +13,6 @@ header{
 
 .column-2{
 	background-color: orange;
-	
 	display:table-cell;
 	width: 50%;
 	padding: 5px;
