@@ -6,7 +6,8 @@ header{
 
 .column-1{
 	background-color: orange;
-	float: left;
+	
+	display:table-cell;
 	width: 45%;
 	margin-right: 10px;
 	padding: 5px;
@@ -14,7 +15,8 @@ header{
 
 .column-2{
 	background-color: orange;
-	float: right;
+	
+	display:table-cell;
 	width: 50%;
 	padding: 5px;
 }
